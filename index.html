@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Portofolio Anastasia</title>
+	
+	<style>
+		
+		* {
+			box-sizing: border-box;
+			margin: 0;
+			padding: 0;
+		}
+
+		body {
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			background-color: #f4f6f9;
+			color: #333333;
+			line-height: 1.6;
+		}
+
+		
+		input[type="radio"] {
+			display: none;
+		}
+
+		.container {
+			width: 90%;
+			max-width: 1000px;
+			margin: 30px auto;
+		}
+
+		
+		header {
+			background-color: #11284b;
+		}
+
+		.navbar {
+			width: 90%;
+			max-width: 1000px;
+			margin: 0 auto;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 15px 0;
+		}
+
+		.logo {
+			color: #f2a900;
+			font-size: 1.25rem;
+			font-weight: bold;
+		}
+
+		.nav-links {
+			display: flex;
+			list-style: none;
+			gap: 15px;
+			align-items: center;
+		}
+
+		.nav-links a {
+			color: #ffffff;
+			text-decoration: none;
+			padding: 8px 18px;
+			border-radius: 6px;
+			font-size: 0.95rem;
+			transition: all 0.3s ease;
+		}
+
+		.nav-links a:hover {
+			color: #f2a900;
+		}
+
+		
+		.beranda {
+			background-color: #ffffff;
+			border-radius: 12px;
+			padding: 40px;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			gap: 30px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+			margin-bottom: 40px;
+		}
+
+		.hero-text {
+			flex: 1.2;
+		}
+
+		.hero-text h1 {
+			font-size: 2rem;
+			color: #11284b;
+			margin-bottom: 10px;
+			font-weight: 600;
+			line-height: 1.3;
+		}
+
+		.highlight-nama {
+			color: #008080;
+			border-bottom: 3px solid #f2a900;
+			padding-bottom: 2px;
+		}
+
+		.deskripsi {
+			color: #666666;
+			font-size: 0.95rem;
+			line-height: 1.6;
+			margin-bottom: 20px;
+		}
+
+		.btn-primary {
+			display: inline-block;
+			background-color: #11284b;
+			color: #ffffff;
+			padding: 12px 26px;
+			text-decoration: none;
+			border-radius: 6px;
+			font-weight: bold;
+			font-size: 0.9rem;
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		.btn-primary:hover {
+			background-color: #008080;
+		}
+
+	
+		.hero-image {
+			flex: 0.8;
+			display: flex;
+			justify-content: center;
+		}
+
+		.hero-image img {
+			width: 220px;
+			height: 220px;
+			object-fit: cover;
+			border-radius: 12px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		
+		.fokus-section {
+			text-align: left;
+		}
+
+		.section-title {
+			color: #11284b;
+			font-size: 1.5rem;
+			margin-bottom: 20px;
+			font-weight: 600;
+		}
+
+		.card-grid {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 20px;
+		}
+
+		.card {
+			background-color: #ffffff;
+			border-radius: 12px;
+			padding: 25px 20px;
+			text-align: left;
+			flex: 1 1 260px;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+			border-top: 4px solid #11284b;
+		}
+
+		.card h3 {
+			color: #11284b;
+			font-size: 1.1rem;
+			margin-bottom: 10px;
+		}
+
+		.card p {
+			color: #666666;
+			font-size: 0.88rem;
+			line-height: 1.5;
+		}
+
+	
+		footer {
+			background-color: #11284b;
+			color: #ffffff;
+			text-align: center;
+			padding: 18px;
+			font-size: 0.85rem;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	
+	<input type="radio" name="page" id="tab-beranda" checked>
+	<input type="radio" name="page" id="tab-profilsaya">
+	<input type="radio" name="page" id="tab-skill">
+	<input type="radio" name="page" id="tab-projek">
+	<input type="radio" name="page" id="tab-kontak">
+	
+<header>
+	<nav class="navbar">
+		<div class="logo">Portofolio</div>
+		<ul class="nav-links">
+			<li><a href="index.html">Beranda</a></li>
+			<li><a href="pages\profil-saya.html">Profil Saya</a></li>
+			<li><a href="pages\projek.html">Projek</a></li>
+			<li><a href="pages\kontak.html">Kontak</a></li>
+		</ul>
+	</nav>
+</header>
+
+<main class="container">
+	<section id="beranda" class="beranda">
+		<div class="hero-text">
+			<h1>Halo, Semua!, Saya<br><span class="highlight-nama">Anastasia Angelita Ranny Wibowo</span></h1>
+			<p class="deskripsi"> 
+				Saya adalah Siswi SMKS TI Bali Global Singaraja, jurusan PPLG (Pengembangan Perangkat Lunak dan Gim).
+			</p>
+			<a href="pages\kontak.html" class="btn-primary">Hubungi Saya</a>
+		</div>
+		<div class="hero-image">
+			<img src="img\Profil.jpg.jpeg" alt="Foto Profil">
+		</div>
+	</section>
+	
+	<section class="fokus-section">
+		<h2 class="section-title">Isi Website Saya mencakup</h2>
+		
+		<div class="card-grid">
+			<div class="card">
+				<h3>Profil Saya</h3>
+				<p>
+					Biodata lengkap, riwayat pendidikan, serta skill dan pengalaman.
+				</p>
+			</div>
+			
+			
+			<div class="card">
+				<h3>Projek</h3>
+				<p>
+					Berisi daftar projek yang sudah pernah saya lakukan.
+				</p>
+			</div>
+			
+			<div class="card">
+				<h3>Kontak</h3>
+				<p>
+					Informasi kontak dan email untuk menghubungi saya.
+				</p>
+			</div>
+		</div>
+	</section>
+</main>
+
+<footer>
+	<p>&copy; 2026 Anastasia - Kelas X PPLG. </p>
+</footer>
+
+</body>
+</html>

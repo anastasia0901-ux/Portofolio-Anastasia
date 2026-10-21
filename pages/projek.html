@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PPLG Profile - Projek</title>
+	<style>
+		* {
+		  box-sizing: border-box;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		body {
+		  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		  background-color: #eef2f7;
+		  color: #333333;
+		  line-height: 1.6;
+		}
+
+		.container {
+		  width: 90%;
+		  max-width: 1000px;
+		  margin: 30px auto;
+		}
+
+		header {
+		  background-color: #11284b;
+		}
+
+		.navbar {
+		  width: 90%;
+		  max-width: 1000px;
+		  margin: 0 auto;
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  padding: 15px 0;
+		}
+
+		.logo {
+		  color: #f2a900;
+		  font-size: 1.25rem;
+		  font-weight: bold;
+		}
+
+		.nav-links {
+		  display: flex;
+		  list-style: none;
+		  gap: 15px;
+		  align-items: center;
+		}
+
+		.nav-links a {
+		  color: #ffffff;
+		  text-decoration: none;
+		  padding: 8px 18px;
+		  border-radius: 6px;
+		  font-size: 0.95rem;
+		  transition: all 0.3s ease;
+		}
+
+		.nav-links a.active {
+		  background-color: #f2a900;
+		  color: #11284b;
+		  font-weight: bold;
+		}
+
+		.nav-links a:hover:not(.active) {
+		  color: #f2a900;
+		}
+
+		.fokus-section {
+		  text-align: left;
+		}
+
+		.section-title {
+		  color: #11284b;
+		  font-size: 1.5rem;
+		  margin-bottom: 20px;
+		  font-weight: 600;
+		}
+
+		.card-grid {
+		  display: flex;
+		  flex-wrap: wrap;
+		  gap: 20px;
+		}
+
+		.card {
+		  background-color: #ffffff;
+		  border-radius: 12px;
+		  padding: 25px 20px;
+		  text-align: left;
+		  flex: 1 1 260px;
+		  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+		  border-top: 4px solid #f2a900;
+		}
+
+		.card h3 {
+		  color: #11284b;
+		  font-size: 1.1rem;
+		  margin-bottom: 10px;
+		}
+
+		.card p {
+		  color: #666666;
+		  font-size: 0.88rem;
+		  line-height: 1.5;
+		}
+
+		.badge-status {
+		  display: inline-block;
+		  font-size: 0.75rem;
+		  font-weight: bold;
+		  padding: 4px 10px;
+		  border-radius: 20px;
+		  margin-bottom: 12px;
+		  text-transform: uppercase;
+		  letter-spacing: 0.5px;
+		}
+
+		.status-selesai {
+		  background-color: #e6f4ea;
+		  color: #137333;
+		}
+
+		.status-ongoing {
+		  background-color: #fef7e0;
+		  color: #b06000;
+		}
+
+		footer {
+		  background-color: #11284b;
+		  color: #ffffff;
+		  text-align: center;
+		  padding: 18px;
+		  font-size: 0.85rem;
+		  margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<nav class="navbar">
+			<div class="logo">PPLG Profile</div>
+			<ul class="nav-links">
+				<li><a href="..\index.html">Beranda</a></li>
+				<li><a href="profil-saya.html">Profil Saya</a></li>
+				<li><a href="projek.html" class="active">Projek</a></li>
+				<li><a href="kontak.html">Kontak</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main class="container">
+		<section class="fokus-section">
+			<h2 class="section-title">Projek yang pernah saya lakukan</h2>
+			
+			<div class="card-grid">
+				<div class="card">
+					<div class="badge-status status-selesai">Selesai</div>
+					<h3>Membuat Design GUI di Visual Studio</h3>
+					<p>
+						Membuat Design GUI Smart Inventory, Form isi KTP, dsb dengan menggunakan Visual Studio 2022
+					</p>
+				</div>
+				
+				<div class="card">
+					<div class="badge-status status-selesai">Selesai</div>
+					<h3>Website Portofolio</h3>
+					<p>
+						Membuat website portofolio menggunakan html dan css menggunakan Notepad++
+					</p>
+				</div>
+				
+				<div class="card">
+					<div class="badge-status status-ongoing">On-Going</div>
+					<h3>Kemampuan Mengetik 10 Jari</h3>
+					<p>
+						Meningkatkan kemampuan mengetik 10 jari yang baru mendapat 65 WPM dan belum mencapai target yaitu 73 WPM.
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	
+	<footer>
+		<p>&copy; 2026 Anastasia - Kelas X PPLG. </p>
+	</footer>
+	
+</body>
+</html>

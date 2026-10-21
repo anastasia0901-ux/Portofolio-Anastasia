@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PPLG Profile - Kontak</title>
+	<style>
+		* {
+		  box-sizing: border-box;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		body {
+		  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		  background-color: #f0f3f8;
+		  color: #333333;
+		  line-height: 1.6;
+		}
+
+		.container {
+		  width: 90%;
+		  max-width: 1000px;
+		  margin: 30px auto;
+		}
+
+		header {
+		  background-color: #11284b;
+		}
+
+		.navbar {
+		  width: 90%;
+		  max-width: 1000px;
+		  margin: 0 auto;
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  padding: 15px 0;
+		}
+
+		.logo {
+		  color: #f2a900;
+		  font-size: 1.25rem;
+		  font-weight: bold;
+		}
+
+		.nav-links {
+		  display: flex;
+		  list-style: none;
+		  gap: 15px;
+		  align-items: center;
+		}
+
+		.nav-links a {
+		  color: #ffffff;
+		  text-decoration: none;
+		  padding: 8px 18px;
+		  border-radius: 6px;
+		  font-size: 0.95rem;
+		  transition: all 0.3s ease;
+		}
+
+		.nav-links a.active {
+		  background-color: #f2a900;
+		  color: #11284b;
+		  font-weight: bold;
+		}
+
+		.nav-links a:hover:not(.active) {
+		  color: #f2a900;
+		}
+
+		.hero-card {
+		  background-color: #ffffff;
+		  border-radius: 16px;
+		  padding: 40px;
+		  box-shadow: 0 8px 25px rgba(17, 40, 75, 0.08);
+		  margin-bottom: 40px;
+		}
+
+		.section-title {
+		  color: #11284b;
+		  font-size: 1.5rem;
+		  margin-bottom: 15px;
+		  font-weight: 600;
+		}
+
+		.deskripsi {
+		  color: #666666;
+		  font-size: 0.95rem;
+		  line-height: 1.6;
+		  margin-bottom: 25px;
+		}
+
+		.contact-form {
+		  display: flex;
+		  flex-direction: column;
+		  gap: 15px;
+		  text-align: left;
+		}
+
+		.form-group label {
+		  display: block;
+		  margin-bottom: 5px;
+		  font-weight: 600;
+		  color: #11284b;
+		  font-size: 0.9rem;
+		}
+
+		.form-group input,
+		.form-group textarea {
+		  width: 100%;
+		  padding: 10px;
+		  border: 1px solid #cccccc;
+		  border-radius: 6px;
+		  font-size: 0.9rem;
+		}
+
+		.form-group input:focus,
+		.form-group textarea:focus {
+		  outline: none;
+		  border-color: #008080;
+		}
+
+		.btn-primary {
+		  display: inline-block;
+		  background-color: #11284b;
+		  color: #ffffff;
+		  padding: 12px 26px;
+		  text-decoration: none;
+		  border-radius: 6px;
+		  font-weight: bold;
+		  font-size: 0.9rem;
+		  border: none;
+		  cursor: pointer;
+		  transition: background-color 0.3s ease;
+		}
+
+		.btn-primary:hover {
+		  background-color: #008080;
+		}
+
+		footer {
+		  background-color: #11284b;
+		  color: #ffffff;
+		  text-align: center;
+		  padding: 18px;
+		  font-size: 0.85rem;
+		  margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+
+	<header>
+		<nav class="navbar">
+			<div class="logo">PPLG Profile</div>
+			<ul class="nav-links">
+				<li><a href="..\index.html">Beranda</a></li>
+				<li><a href="profil-saya.html">Profil Saya</a></li>
+				<li><a href="projek.html">Projek</a></li>
+				<li><a href="kontak.html" class="active">Kontak</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main class="container">
+		<section class="hero-card">
+			<div style="width: 100%;">
+				<h2 class="section-title" style="text-align: left; margin-bottom: 15px;">Hubungi Saya</h2>
+				<p class="deskripsi" style="max-width: 100%; margin-bottom: 25px;">
+					Silakan isi formulir di bawah ini jika ingin menghubungi atau berdiskusi dengan saya.
+				</p>
+
+				<form class="contact-form">
+					<div class="form-group">
+						<label for="nama">Nama Lengkap</label>
+						<input type="text" id="nama" placeholder="Masukkan nama Anda..." required>
+					</div>
+
+					<div class="form-group">
+						<label for="email">Alamat Email</label>
+						<input type="email" id="email" placeholder="nama@email.com..." required>
+					</div>
+
+					<div class="form-group">
+						<label for="pesan">Pesan</label>
+						<textarea id="pesan" rows="5" placeholder="Tuliskan pesan Anda..." required></textarea>
+					</div>
+
+					<button type="submit" class="btn-primary">Kirim Pesan</button>
+				</form>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p>&copy; 2026 Anastasia - Kelas X PPLG. Dibuat murni dengan HTML & CSS.</p>
+	</footer>
+
+</body>
+</html>

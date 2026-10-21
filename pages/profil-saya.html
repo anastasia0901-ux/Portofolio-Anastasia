@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>PPLG Profile - Profil Saya</title>
+	<style>
+		* {
+		  box-sizing: border-box;
+		  margin: 0;
+		  padding: 0;
+		}
+
+		body {
+		  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+		  background-color: #f4f6f9;
+		  color: #333333;
+		  line-height: 1.6;
+		}
+
+		.container {
+		  width: 90%;
+		  max-width: 1000px;
+		  margin: 30px auto;
+		}
+
+		header {
+		  background-color: #11284b;
+		}
+
+		.navbar {
+		  width: 90%;
+		  max-width: 1000px;
+		  margin: 0 auto;
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  padding: 15px 0;
+		}
+
+		.logo {
+		  color: #f2a900;
+		  font-size: 1.25rem;
+		  font-weight: bold;
+		}
+
+		.nav-links {
+		  display: flex;
+		  list-style: none;
+		  gap: 15px;
+		  align-items: center;
+		}
+
+		.nav-links a {
+		  color: #ffffff;
+		  text-decoration: none;
+		  padding: 8px 18px;
+		  border-radius: 6px;
+		  font-size: 0.95rem;
+		  transition: all 0.3s ease;
+		}
+
+		.nav-links a.active {
+		  background-color: #f2a900;
+		  color: #11284b;
+		  font-weight: bold;
+		}
+
+		.nav-links a:hover:not(.active) {
+		  color: #f2a900;
+		}
+
+		.hero-card {
+		  background-color: #ffffff;
+		  border-radius: 12px;
+		  padding: 40px;
+		  display: flex;
+		  justify-content: space-between;
+		  align-items: center;
+		  gap: 30px;
+		  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+		  margin-bottom: 40px;
+		  border-left: 6px solid #008080;
+		}
+
+		.hero-text {
+		  flex: 1.2;
+		}
+
+		.hero-text h1 {
+		  font-size: 2.2rem;
+		  color: #11284b;
+		  margin-bottom: 15px;
+		  font-weight: 600;
+		}
+
+		.highlight-nama {
+		  color: #008080;
+		  border-bottom: 3px solid #f2a900;
+		  padding-bottom: 2px;
+		}
+
+		.bio-box {
+		  background-color: #f8fafc;
+		  border-left: 4px solid #11284b;
+		  padding: 15px;
+		  margin-bottom: 20px;
+		  border-radius: 0 6px 6px 0;
+		}
+
+		.bio-box p {
+		  font-size: 0.92rem;
+		  color: #444444;
+		  margin-bottom: 8px;
+		}
+
+		.bio-box p:last-child {
+		  margin-bottom: 0;
+		}
+
+		.btn-primary {
+		  display: inline-block;
+		  background-color: #11284b;
+		  color: #ffffff;
+		  padding: 12px 26px;
+		  text-decoration: none;
+		  border-radius: 6px;
+		  font-weight: bold;
+		  font-size: 0.9rem;
+		  border: none;
+		  cursor: pointer;
+		  transition: background-color 0.3s ease;
+		}
+
+		.btn-primary:hover {
+		  background-color: #008080;
+		}
+
+		.hero-image {
+		  flex: 0.8;
+		  display: flex;
+		  justify-content: center;
+		}
+
+		.hero-image img {
+		  width: 220px;
+		  height: 220px;
+		  object-fit: cover;
+		  border-radius: 12px;
+		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+		}
+
+		.fokus-section {
+		  text-align: left;
+		}
+
+		.section-title {
+		  color: #008080;
+		  font-size: 1.5rem;
+		  margin-bottom: 20px;
+		  font-weight: 600;
+		}
+
+		.tabel-container {
+		  overflow-x: auto;
+		}
+
+		.custom-table {
+		  width: 100%;
+		  border-collapse: collapse;
+		  background-color: #ffffff;
+		  border-radius: 8px;
+		  overflow: hidden;
+		  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+		}
+
+		.custom-table th,
+		.custom-table td {
+		  padding: 14px 18px;
+		  text-align: left;
+		  border-bottom: 1px solid #e2e8f0;
+		  font-size: 0.92rem;
+		}
+
+		.custom-table th {
+		  background-color: #11284b;
+		  color: #ffffff;
+		  font-weight: 600;
+		}
+
+		.custom-table tr:hover {
+		  background-color: #f8fafc;
+		}
+
+		.skill-container {
+		  display: flex;
+		  gap: 30px;
+		  flex-wrap: wrap;
+		  background-color: #ffffff;
+		  padding: 30px;
+		  border-radius: 12px;
+		  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
+		}
+
+		.skill-group {
+		  flex: 1 1 300px;
+		}
+
+		.skill-group h3 {
+		  color: #11284b;
+		  font-size: 1.15rem;
+		  margin-bottom: 15px;
+		  border-bottom: 2px solid #f2a900;
+		  padding-bottom: 5px;
+		  display: inline-block;
+		}
+
+		.list-skill {
+		  list-style-type: none;
+		}
+
+		.list-skill li {
+		  position: relative;
+		  padding-left: 20px;
+		  margin-bottom: 12px;
+		  color: #444444;
+		  font-size: 0.93rem;
+		  line-height: 1.5;
+		}
+
+		.list-skill li::before {
+		  content: "•";
+		  color: #008080;
+		  font-weight: bold;
+		  font-size: 1.2rem;
+		  position: absolute;
+		  left: 0;
+		  top: -2px;
+		}
+
+		footer {
+		  background-color: #11284b;
+		  color: #ffffff;
+		  text-align: center;
+		  padding: 18px;
+		  font-size: 0.85rem;
+		  margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	
+	<header>
+		<nav class="navbar">
+			<div class="logo">PPLG Profile</div>
+			<ul class="nav-links">
+				<li><a href="..\index.html">Beranda</a></li>
+				<li><a href="profil-saya.html" class="active">Profil Saya</a></li>
+				<li><a href="projek.html">Projek</a></li>
+				<li><a href="kontak.html">Kontak</a></li>
+			</ul>
+		</nav>
+	</header>
+	
+	<main class="container">
+		<section class="hero-card">
+			<div class="hero-text">
+				<h1>Biodata <span class="highlight-nama">Saya</span></h1>
+			
+				<div class="bio-box">
+					<p><strong>Nama Lengkap:</strong>Anastasia Angelita Ranny Wibowo</p>
+					<p><strong>Sekolah:</strong> SMKS TI Bali Global Singaraja</p>
+					<p><strong>Jurusan:</strong> PPLG (Pengembangan Perangkat Lunak dan Gim)</p>
+					<p><strong>Kelas:</strong> X PPLG</p>
+					<p><strong>Fokus Belajar:</strong> Pemrograman dan Design Grafis</p>
+				</div>
+			
+				<a href="kontak.html" class="btn-primary">Hubungi Saya</a>
+			</div>
+			
+			<div class="hero-image">
+				<img src="..\img\Profil.jpg.jpeg" alt="Foto Profil">
+			</div>
+		</section>
+		
+		<section class="fokus-section">
+			<h2 class="section-title">Riwayat Pendidikan</h2>
+			
+			<div class="tabel-container">
+				<table class="custom-table">
+					<thead>
+						<tr>
+							<th>Tahun</th>
+							<th>Sekolah</th>
+							<th>Jurusan / Keterangan</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td> 2018 - 2023</td>
+							<td>SD Katolik Karya Singaraja</td>
+							<td>Lulus SD</td>
+						</tr>
+						<tr>
+							<td> 2023 - 2026</td>
+							<td> SMP Katolik Santo Paulus Singaraja</td>
+							<td>Lulus SMP</td>
+						</tr>
+						<tr>
+							<td> Sedang berlangsung</td>
+							<td> SMKS TI Bali Global Singaraja</td>
+							<td>Siswa PPLG</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		
+		<section class="fokus-section" style="margin-top: 40px;">
+			<h2 class="section-title">Skill, Kemampuan & Prestasi</h2>
+			
+			<div class="skill-container">
+				<div class="skill-group">
+					<h3>Keahlian</h3>
+					<ul class="list-skill">
+						<li><strong>Menulis Puisi</strong></li>
+						<li><strong>Fotografi</strong></li>
+						<li><strong>Design Grafis</strong></li>
+						<li><strong>Editing Video/Konten Pendek</strong></li>
+						<li><strong>Produksi Film Pendek</strong></li>
+					</ul>
+				</div>
+				
+				<div class="skill-group">
+					<h3>Pengalaman Dalam hal Kepemimpinan</h3>
+					<ul class="list-skill">
+						<li>Menjabat sebagai Ketua Osis periode 2023-2024</li>
+						<li>Menjabat sebagai Bendahara Osis 1 periode 2025-2026</li>
+						<li>Koordinator Seksi Bidang dalam organisasi Osis (2025)</li>
+						<li>Mengikuti Latihan Pengurus Osis Se-Keuskupan Denpasar 2023 s.d 2024</li>
+						<li>Peserta Lomba Giat Pramuka TKK-MPK Se-Keuskupan Denpasar (2025)</li>
+						<li>Anggota Organisasi KSPAN periode 2023-2025</li>
+					</ul>
+					
+					<h3 style="margin-top: 25px;">Prestasi</h3>
+					<ul class="list-skill">
+						<li>Lomba Tari Bali Se-Kabupaten Buleleng secara Online : Meraih Juara 1 Lomba Tari Condong</li>
+						<li>Lomba Mata Pelajaran Informatika tingkat SMP Se-Kabupaten Buleleng : Meraih Peringkat 20</li>
+						<li>Olimpiade IPS (2023-2024) : Menjadi Peserta Olimpiade IPS</li>
+						<li>Lomba Memperingati Hari Kemerdekaan Indonesia 17 Agustus 1945 : Meraih Juara 1 Lomba Membaca Undang-Undang Dasar 1945</li>
+						<li>Lomba Giat Pramuka TKK-MPK Se-Keuskupan Denpasar : Meraih Juara 1 PPGD (Pertolongan Pertama Gawat Darurat) tingkat SMP</li>
+						<li>Lomba Bidang Informatika : Meraih peringkat 20</li>
+						<li>Lomba Identic 3.0 SMK TI Bali Global Singaraja : Meraih peringkat 25 dalam perlombaan kategori Presentation With Canva</li>
+						<li>Olimpiade Siswa Juara Nasional : Meraih medali Perak dalam Olimpiade Bidang Bahasa Indonesia</li>
+						<li>Lomba Cipta dan Baca Puisi tingkat SMP Se-Kabupaten Buleleng : Peserta Lomba Cipta dan Baca Puisi</li>
+						<li>Lomba Bulan Kitab Suci Nasional 2017 : Meraih Juara 1 Cerdas Cermat Ber-tim</li>
+						<li>Lomba Bulan Kitab Suci Nasional 2018 : Meraih Juara 3 dalam kategori SD tebak gambar</li>
+						<li>Lomba Gerak Jalan SD 17 Agustus 2022 : Peserta Lomba Gerak Jalan 8KM</li>
+					</ul>
+				</div>
+			</div>
+		</section>
+		
+	</main>
+		
+	<footer>
+		<p>&copy; 2026 Anastasia - Kelas X PPLG.</p>
+	</footer>
+</body>
+</html>
